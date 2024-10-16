@@ -17,7 +17,7 @@ export default class FchatBasic {
     try {
       this.disconnect(); //Attempt a disconnect if the socket is not null
 
-      var ticket = providedTicket || await this.requestTicket(account, password); //Use the ticket provided if it exists, otherwise request a new one
+      var ticket = providedTicket || (await this.requestTicket(account, password)); //Use the ticket provided if it exists, otherwise request a new one
 
       this.socket = new ws(this.config.fchat.url);
       this.socket.on('open', () => this.socketOnOpen(character, account, ticket));

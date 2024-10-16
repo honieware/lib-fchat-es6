@@ -1,7 +1,7 @@
 require("dotenv").config();
 
-const ApiManager = require("lib-fchat/lib/ApiManager");
-const config = require("./config");
+import ApiManager from 'lib-fchat/lib/ApiManager';
+import config from './config';
 
 var credentials = {
   account: process.env.ACCOUNT,

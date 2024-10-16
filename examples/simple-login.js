@@ -1,7 +1,7 @@
 require("dotenv").config();
 
-const Fchat = require("lib-fchat/lib/Fchat");
-const config = require("./config");
+import Fchat from 'lib-fchat/lib/Fchat';
+import config from './config';
 
 var credentials = {
   account: process.env.ACCOUNT,
